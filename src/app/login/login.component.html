@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="offset-lg-2 col-lg-8 col-sm-8 col-8 border rounded main-section"
+    >
+      <h3 class="text-center text-inverse">Login</h3>
+      <hr />
+      <form class="container" [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="form-group">
+              <label class="text-inverse" for="validationCustom01"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                formControlName="username"
+                placeholder="username"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="form-group">
+              <label class="text-inverse" for="validationCustom02"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+                placeholder="********"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="text-danger">{{ error }}</p>
+        <a href="/signup">Create your Acccount?</a>
+
+        <hr />
+        <div class="row">
+          <div class="col-lg-6 col-sm-12 col-12">
+            <button class="btn btn-info" type="submit">login</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

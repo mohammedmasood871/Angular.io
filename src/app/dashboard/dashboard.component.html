@@ -1,0 +1,30 @@
+<body>
+  <div class="container">
+    <div>
+      <div class="card">
+        <div
+          class="card-header"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1540228232483-1b64a7024923?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+          "
+        >
+          <div class="card-photo">
+            <img
+              src="https://demos.creative-tim.com/impact-design-system-pro/docs/assets/img/team/6.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name"></h3>
+          <p class="card-description" *ngFor="let data of user">
+            {{ data.name }}
+          </p>
+          <div class="card-button">
+            <button class="btn btn-primary" (click)="logOut()">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
